@@ -1,34 +1,18 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Scanner;
-
 public class MyJavaProgram {
 
 	// method - takes input and output
-	public static void main(String[] args) throws FileNotFoundException {
-        // LinkedList as a stack 
-        LinkedList<String> names = new LinkedList<String>();
-        names.push("Frankie");
-        names.push("Mochi");
-        names.push("Axel");
+	public static void main(String[] args) {
+        int[][] data = {
+            {4, 1, 64, 22},
+            {5, 7, 11, 23, 4, 6, 12, 92},
+            {9, 78, 31, 56}
+        };
 
-        Iterator<String> it = names.iterator();
-        
-        while(it.hasNext()) {
-            System.out.println((it.next()));
+        for(int i = 0; i < data.length; i++) {
+            for(int j = 0; j < data[i].length; j++) {
+                System.out.print(data[i][j] + " ");
+            }
+            System.out.println();
         }
-
-        names.add(2, "Felix");
-
-        for(String s: names) {
-            System.out.println(s);
-        }
-
-        
 	}
-
 }

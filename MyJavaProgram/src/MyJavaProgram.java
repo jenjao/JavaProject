@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
@@ -15,9 +16,19 @@ public class MyJavaProgram {
         names.push("Mochi");
         names.push("Axel");
 
-        System.out.println(names.pop());
-        System.out.println(names.remove());
-        System.out.println(names.removeFirst());
+        Iterator<String> it = names.iterator();
+        
+        while(it.hasNext()) {
+            System.out.println((it.next()));
+        }
+
+        names.add(2, "Felix");
+
+        for(String s: names) {
+            System.out.println(s);
+        }
+
+        
 	}
 
 }

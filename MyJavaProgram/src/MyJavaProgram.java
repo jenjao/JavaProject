@@ -9,15 +9,15 @@ public class MyJavaProgram {
 
 	// method - takes input and output
 	public static void main(String[] args) throws FileNotFoundException {
-        // LinkedList as a queue
+        // LinkedList as a stack 
         LinkedList<String> names = new LinkedList<String>();
-        names.add("Frankie");
-        names.add("Mochi");
-        names.add("Axel");
+        names.push("Frankie");
+        names.push("Mochi");
+        names.push("Axel");
 
+        System.out.println(names.pop());
         System.out.println(names.remove());
-        System.out.println(names.remove());
-        System.out.println(names.remove());
+        System.out.println(names.removeFirst());
 	}
 
 }
